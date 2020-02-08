@@ -1,6 +1,109 @@
 /* 
 Pre-made buttons by Oskar
-Link this css-file to your site to use my buttons
+Download and link this css-file to your site to use my buttons
 Link also following sources:
 
 */
+
+/*********************************
+Basic button functions
+    -removing deafult styling
+    -adding basic styling to button
+***********************************/
+
+.button {
+    display: inline-block;
+    border: none;
+    padding: 10px 14px;
+    margin: 0;
+    border: 0;
+    border-radius: 3px;
+    text-decoration: none;
+    background: rgb(51,51,51);
+    color: rgb(255,255,255);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    transition: opacity 250ms ease-in-out, 
+                transform 150ms ease,
+                box-shadow 150ms ease-in-out;
+}
+
+
+
+/* Show more */
+.showMore {
+    width: 150px;
+}
+
+.showMore span {
+    cursor: pointer;    
+    position: relative;
+    transition: 0.5s;
+}
+
+.showMoreRight span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.showMoreDown span:after{
+    content: '\02c5';
+    position: absolute;
+    font-size: 2rem;
+    opacity: 0;
+    top: -0.5rem;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.showMore:hover span {
+    padding-right: 25px;
+}
+
+.showMore:hover span:after {
+    opacity: 1;    
+    right: 0;
+}
+
+
+
+/******************************
+            Animations 
+*******************************/
+
+.buttonAnim:hover {
+    opacity: 0.8;    
+}
+
+button:focus {
+    outline: none !important;
+}
+
+.buttonAnim:active {    
+    transform: scale(0.99);
+}
+
+/* with shadow */
+
+.shadowClick:hover {    
+    box-shadow: 0 0 8px rgb(0, 0, 0);
+}
+
+.shadowClick:active {    
+    box-shadow: 0 0 5px rgb(0, 0, 0);
+}
+
+/********************************
+Functionality
+*********************************/
+
+.disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
