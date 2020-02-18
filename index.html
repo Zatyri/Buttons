@@ -8,11 +8,23 @@
     <title>Testing and prewiev site</title>
 </head>
 <body>
+    <h1>Basic buttons</h1>
     <button class="button buttonAnim">Basic styling</button>
     <button class="button shadowClick">Basic with shadow</button>
     <button class="button disabled" disabled>Disabled button</button>
     <button class="button showMore showMoreRight"><span>Show more</span></button>
     <button class="button showMore showMoreDown"><span>Show more</span></button>
+    <h1>Menu buttons</h1>
+    <div class="menuButton" onclick="animateMenu(this)">
+        <span class="bar1"></span>
+        <span class="bar2"></span>
+        <span class="bar3"></span>
+    </div>
     
+    <script>
+        function animateMenu(e){
+            e.classList.toggle("animateMenu");
+        }
+    </script>
 </body>
 </html>
